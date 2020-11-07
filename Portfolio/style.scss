@@ -1,0 +1,527 @@
+/* changing colors of side, top nav and other pages */
+
+  /* Home */
+
+  $home-body: #a2e3c4;
+
+  /* topnav */
+  $topnav: #3c493f;
+  $topnav-a: #7e8d85;
+  $topnav-a-hover: #b3bfb8;
+
+  /* SideNav */
+  $sidenav: #3c493f;
+  $sidenav-a: " /*adjust via JS */ :( ";
+
+  /* topButt */
+  $topButt: grey;
+  $topButt-focus: dimgrey;
+  $topButt-active: #c6538c;
+  $topButt-hover: dimgrey;
+
+  /* body */
+  $body: #f0f7f4;
+
+  /*ProjectsMainContent*/
+  $ProjectsCol: #7e8d85;
+  $proj-Cont: #7e8d85;
+  $proj-innerCont: #7e8d85;
+  $proj-Emp: #b3bfb8;
+
+//Actual Classes/coding
+html {
+    font-family: 'Open Sans', sans-serif;
+    -webkit-backface-visibility: hidden;
+    overflow-x: hidden;
+}
+
+body{
+  background-color: $body;
+}
+
+//Persistent bottom footer
+footer {
+  padding-top: 10px;
+  text-align: center;
+  border-top: 1px solid black;
+  display: block;
+  float:right;
+  bottom:0;
+}
+
+/*generic container*/
+%Container{
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+
+
+}
+
+%flex-Cont{
+  position: block;
+  display: flex;
+  width: 100%;
+  word-wrap: break-word;
+  column-count: 4;
+}
+
+/* generic inner container for project */
+%InnerCont {
+  display: inline-block;
+  border: 1px solid black;
+
+
+  img{
+    max-width:100%;
+    max-height:200px;
+    display: inline-block;
+
+  }
+
+  .InnerCont{
+    display: flex;
+    column-count: 2;
+    column-width: 50%;
+
+  }
+
+  .Emp{
+    text-align: center;
+    word-wrap: break-word;
+    width: 500px;
+
+
+  }
+
+  ul{
+    list-style: none;
+
+
+  }
+
+  p{
+    text-align: left;
+  }
+
+
+}
+
+/*generic bar*/
+%Banner{
+  display: block;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  height: 50px;
+
+}
+
+/*generic column*/
+%Column{
+  display: inline;
+}
+
+
+
+/* This is the persistent Navbar */
+.topnav {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  text-align: center;
+
+
+
+  ul {
+
+    list-style: none;
+    position: relative;
+    padding-left: 0;
+    margin: auto;
+    background-color: $topnav;
+
+    overflow: hidden;
+    height: 100%;
+
+
+
+
+  }
+
+  li {
+    display: inline-block;
+    margin-left: -5px;
+
+  }
+  a{
+
+    display: block;
+    text-decoration: none;
+    padding: 20px 20px;
+    transition: .3s ease-in, background-color .5s;
+
+    background-color: $topnav-a;
+    color: black;
+
+  }
+
+  a:hover{
+    background-color: $topnav-a-hover;
+
+  }
+
+}
+
+/* Generic top up button */
+%topButt{
+  height:50px;
+  width:80px;
+  z-index: 2;
+  border: 1px solid transparent;
+  border-radius: 5%;
+  top:90%;
+  left:80%;
+  cursor: pointer;
+  background-color: $topButt;
+
+}
+
+
+
+
+/* Generic Side Nav */
+%SideNav {
+  height: 100%;
+  width: 10%;
+  position: fixed;
+  display: inline-block;
+  z-index: 1;
+  text-align: center;
+  transition: left 1s;
+  overflow: hidden;
+  top: 0%;
+  left: -200px;
+  background-color: $sidenav;
+
+
+  ul {
+    padding: 0;
+    margin: 0;
+
+
+  }
+
+  li {
+
+
+
+
+  }
+
+  a{
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: black;
+    transition: background-color .5s;
+
+
+
+
+  }
+
+
+
+}
+
+
+/* this is the home page main content*/
+
+.home {
+  background-color: $home-body;
+  .topnav{
+    li:nth-child(1){
+      a:nth-child(1){
+        background-color: $topnav-a-hover;
+      }
+    }
+  }
+
+.HomeMainContent {
+  position: relative;
+  display: block;
+
+  height:500px;
+  width: 800px;
+  margin: auto;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  word-wrap: break-word;
+
+  img {
+    display: inline-block;
+    position: relative;
+    max-width:500px;
+    max-height:502px;
+
+
+  }
+
+
+  .Info {
+
+    height: inherit;
+    position: absolute;
+    display: inline-block;
+    background-color: lightgrey;
+
+
+    h1{
+      position: relative;
+      text-align: center;
+      top: 10%;
+
+    }
+
+    p{
+      position: relative;
+      padding: 0 5%;
+            top: 10%;
+
+
+  }
+
+  }
+
+}
+
+}
+
+.Project {
+  position: absolute;
+
+  .stopper {
+    display: block;
+    background-color: yellow;
+
+  }
+
+  h1{
+    align-content: center;
+  }
+
+  .topnav{
+    li:nth-child(2){
+      a:nth-child(1){
+        background-color: $topnav-a-hover;
+      }
+    }
+  }
+
+
+  .topButt {
+    @extend %topButt;
+    position: sticky;
+      border:0;
+      padding: 0;
+      transition: background-color .5s;
+
+
+  }
+
+  .topButt:focus{
+
+    background-color: $topButt-focus;
+
+    outline:none;
+
+
+  }
+
+
+  .topButt:active{
+
+
+    background-color: $topButt-active;
+
+  }
+
+
+  .topButt:hover{
+
+
+    background-color: $topButt-hover;
+
+  }
+
+  .ProjectsMainContent {
+    position: block;
+    display: flex;
+
+    width: 100%;
+    word-wrap: break-word;
+    column-count: 4;
+
+    .Column{
+      padding: 1%;
+      margin: 1%;
+      width: 25%;
+      text-align: center;
+      background-color: $ProjectsCol;
+
+
+      img {
+        display: inline-block;
+        position: relative;
+        max-width:100%;
+        max-height:100%;
+
+        transition: opacity .3s ease-out, transform .3s ease-out;
+
+      }
+
+      img:hover{
+        transform: scale(.95);
+        opacity: .5;
+      }
+
+      h1{
+
+
+        margin: auto;
+        text-align: center;
+       border-top: black solid 1px;
+       border-bottom: black solid 1px;
+
+
+
+      }
+
+      h2{
+        margin:auto;
+      }
+    }
+  }
+
+  .Banner{
+    @extend %Banner;
+      padding-top: 1.0%;
+
+      float: right;
+  }
+
+  .Container {
+    @extend %Container;
+    background-color: $proj-Cont;
+    border: 1px solid transparent;
+
+    width: 90%;
+    float: right;
+    margin: 2% 0;
+    padding-bottom: 1%;
+
+    h1{
+
+    }
+
+
+      .InnerCont {
+        @extend %InnerCont;
+        border: 1px solid transparent;
+        background-color: $proj-innerCont;
+        border-radius: 1%;
+        padding: 0 1%;
+
+
+        .Emp{
+          border: 1px solid transparent;
+          border-radius: 2%;
+          background-color: $proj-Emp;
+          margin: 1%;
+          padding: 1%;
+          border: none;
+
+        }
+
+      }
+
+
+  }
+
+
+
+  .SideNav{
+    @extend %SideNav;
+
+
+    bottom: 50%;
+
+    li {
+
+
+    }
+
+    ul{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+
+    }
+
+    a{
+      border: none;
+
+    }
+
+
+  }
+}
+
+.Skills {
+
+  .topnav{
+    li:nth-child(3){
+      a:nth-child(1){
+        background-color: $topnav-a-hover;
+      }
+    }
+  }
+
+
+  .Container {
+    @extend %Container;
+    display: block;
+    width: 100%;
+    text-align: center;
+    border: 1px solid black;
+
+    li{
+      display: inline-block;
+      padding: 1%;
+    }
+
+  }
+
+
+  h1{
+    padding-top: 1%;
+
+    text-align: center;
+  }
+
+
+
+
+
+
+
+  .SideNav{
+    @extend %SideNav;
+  }
+
+
+
+
+
+}
