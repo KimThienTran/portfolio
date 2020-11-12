@@ -5,16 +5,16 @@
   $home-body: #a2e3c4;
 
   /* topnav */
-  $topnav: #3c493f;
-  $topnav-a: #7e8d85;
-  $topnav-a-hover: #b3bfb8;
+  $topnav: #72D5A5;
+  $topnav-a: #72D5A5;
+  $topnav-a-hover: #38BC7D;
 
   /* SideNav */
-  $sidenav: #3c493f;
+  $sidenav: #72D5A5;
   $sidenav-a: " /*adjust via JS */ :( ";
 
   /* topButt */
-  $topButt: grey;
+  $topButt: #E9ECEA;
   $topButt-focus: dimgrey;
   $topButt-active: #c6538c;
   $topButt-hover: dimgrey;
@@ -23,16 +23,30 @@
   $body: #f0f7f4;
 
   /*ProjectsMainContent*/
-  $ProjectsCol: #7e8d85;
-  $proj-Cont: #7e8d85;
-  $proj-innerCont: #7e8d85;
-  $proj-Emp: #b3bfb8;
+  $ProjectsCol: #A2E3C4;
+  $proj-Cont: #A2E3C4;
+  $proj-innerCont: #A2E3C4;
+  $proj-Emp: #E9ECEA;
 
 //Actual Classes/coding
 html {
     font-family: 'Open Sans', sans-serif;
     -webkit-backface-visibility: hidden;
     overflow-x: hidden;
+}
+
+h1{
+  font-family: 'Roboto', sans-serif;
+}
+
+h2{
+  font-family: 'Roboto', sans-serif;
+
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+
 }
 
 body{
@@ -54,8 +68,6 @@ footer {
   display: inline-block;
   width: 100%;
   text-align: center;
-
-
 }
 
 %flex-Cont{
@@ -64,6 +76,12 @@ footer {
   width: 100%;
   word-wrap: break-word;
   column-count: 4;
+}
+
+.flexbox-horiz{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 /* generic inner container for project */
@@ -106,6 +124,13 @@ footer {
 
 
 }
+
+
+  /*horizontal container*/
+  .flexboi-horiz {
+    display: flex ;
+    flex-direction: row;
+  }
 
 /*generic bar*/
 %Banner{
@@ -209,29 +234,19 @@ footer {
     padding: 0;
     margin: 0;
 
+    li {
 
+      a{
+        display: block;
+        text-decoration: none;
+        padding: 20px;
+        color: black;
+        transition: background-color .5s;
+    
+      }
+  
+    }
   }
-
-  li {
-
-
-
-
-  }
-
-  a{
-    display: block;
-    text-decoration: none;
-    padding: 20px;
-    color: black;
-    transition: background-color .5s;
-
-
-
-
-  }
-
-
 
 }
 
@@ -251,7 +266,6 @@ footer {
 .HomeMainContent {
   position: relative;
   display: block;
-
   height:500px;
   width: 800px;
   margin: auto;
@@ -264,7 +278,8 @@ footer {
     position: relative;
     max-width:500px;
     max-height:502px;
-
+    border: 1px;
+    border-radius: 0.25rem;
 
   }
 
@@ -287,12 +302,17 @@ footer {
     p{
       position: relative;
       padding: 0 5%;
-            top: 10%;
+      top: 10%;
 
 
   }
 
   }
+
+  footer {
+    background-color: #c6538c;
+  }
+  
 
 }
 
@@ -369,7 +389,7 @@ footer {
       width: 25%;
       text-align: center;
       background-color: $ProjectsCol;
-
+      border-radius: 1rem;
 
       img {
         display: inline-block;
@@ -422,7 +442,7 @@ footer {
     padding-bottom: 1%;
 
     h1{
-
+      
     }
 
 
@@ -471,7 +491,6 @@ footer {
 
     a{
       border: none;
-
     }
 
 

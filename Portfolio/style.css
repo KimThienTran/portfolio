@@ -10,6 +10,15 @@ html {
   -webkit-backface-visibility: hidden;
   overflow-x: hidden; }
 
+h1 {
+  font-family: 'Roboto', sans-serif; }
+
+h2 {
+  font-family: 'Roboto', sans-serif; }
+
+p {
+  font-family: 'Roboto', sans-serif; }
+
 body {
   background-color: #f0f7f4; }
 
@@ -26,6 +35,11 @@ footer {
   display: inline-block;
   width: 100%;
   text-align: center; }
+
+.flexbox-horiz {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
 
 /* generic inner container for project */
 .Project .Container .InnerCont {
@@ -48,6 +62,11 @@ footer {
   .Project .Container .InnerCont p {
     text-align: left; }
 
+/*horizontal container*/
+.flexboi-horiz {
+  display: flex;
+  flex-direction: row; }
+
 /*generic bar*/
 .Project .Banner {
   display: block;
@@ -68,7 +87,7 @@ footer {
     position: relative;
     padding-left: 0;
     margin: auto;
-    background-color: #3c493f;
+    background-color: #72D5A5;
     overflow: hidden;
     height: 100%; }
   .topnav li {
@@ -79,10 +98,10 @@ footer {
     text-decoration: none;
     padding: 20px 20px;
     transition: .3s ease-in, background-color .5s;
-    background-color: #7e8d85;
+    background-color: #72D5A5;
     color: black; }
   .topnav a:hover {
-    background-color: #b3bfb8; }
+    background-color: #38BC7D; }
 
 /* Generic top up button */
 .Project .topButt {
@@ -94,7 +113,7 @@ footer {
   top: 90%;
   left: 80%;
   cursor: pointer;
-  background-color: grey; }
+  background-color: #E9ECEA; }
 
 /* Generic Side Nav */
 .Project .SideNav, .Skills .SideNav {
@@ -108,22 +127,22 @@ footer {
   overflow: hidden;
   top: 0%;
   left: -200px;
-  background-color: #3c493f; }
+  background-color: #72D5A5; }
   .Project .SideNav ul, .Skills .SideNav ul {
     padding: 0;
     margin: 0; }
-  .Project .SideNav a, .Skills .SideNav a {
-    display: block;
-    text-decoration: none;
-    padding: 20px;
-    color: black;
-    transition: background-color .5s; }
+    .Project .SideNav ul li a, .Skills .SideNav ul li a {
+      display: block;
+      text-decoration: none;
+      padding: 20px;
+      color: black;
+      transition: background-color .5s; }
 
 /* this is the home page main content*/
 .home {
   background-color: #a2e3c4; }
   .home .topnav li:nth-child(1) a:nth-child(1) {
-    background-color: #b3bfb8; }
+    background-color: #38BC7D; }
   .home .HomeMainContent {
     position: relative;
     display: block;
@@ -137,7 +156,9 @@ footer {
       display: inline-block;
       position: relative;
       max-width: 500px;
-      max-height: 502px; }
+      max-height: 502px;
+      border: 1px;
+      border-radius: 0.25rem; }
     .home .HomeMainContent .Info {
       height: inherit;
       position: absolute;
@@ -151,6 +172,8 @@ footer {
         position: relative;
         padding: 0 5%;
         top: 10%; }
+    .home .HomeMainContent footer {
+      background-color: #c6538c; }
 
 .Project {
   position: absolute; }
@@ -160,7 +183,7 @@ footer {
   .Project h1 {
     align-content: center; }
   .Project .topnav li:nth-child(2) a:nth-child(1) {
-    background-color: #b3bfb8; }
+    background-color: #38BC7D; }
   .Project .topButt {
     position: sticky;
     border: 0;
@@ -184,7 +207,8 @@ footer {
       margin: 1%;
       width: 25%;
       text-align: center;
-      background-color: #7e8d85; }
+      background-color: #A2E3C4;
+      border-radius: 1rem; }
       .Project .ProjectsMainContent .Column img {
         display: inline-block;
         position: relative;
@@ -205,7 +229,7 @@ footer {
     padding-top: 1.0%;
     float: right; }
   .Project .Container {
-    background-color: #7e8d85;
+    background-color: #A2E3C4;
     border: 1px solid transparent;
     width: 90%;
     float: right;
@@ -213,13 +237,13 @@ footer {
     padding-bottom: 1%; }
     .Project .Container .InnerCont {
       border: 1px solid transparent;
-      background-color: #7e8d85;
+      background-color: #A2E3C4;
       border-radius: 1%;
       padding: 0 1%; }
       .Project .Container .InnerCont .Emp {
         border: 1px solid transparent;
         border-radius: 2%;
-        background-color: #b3bfb8;
+        background-color: #E9ECEA;
         margin: 1%;
         padding: 1%;
         border: none; }
@@ -233,7 +257,7 @@ footer {
       border: none; }
 
 .Skills .topnav li:nth-child(3) a:nth-child(1) {
-  background-color: #b3bfb8; }
+  background-color: #38BC7D; }
 .Skills .Container {
   display: block;
   width: 100%;
