@@ -30,24 +30,15 @@
 
 //Actual Classes/coding
 html {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     -webkit-backface-visibility: hidden;
     overflow-x: hidden;
 }
 
 h1{
-  font-family: 'Roboto', sans-serif;
+  font-size: small;
 }
 
-h2{
-  font-family: 'Roboto', sans-serif;
-
-}
-
-p {
-  font-family: 'Roboto', sans-serif;
-
-}
 
 body{
   background-color: $body;
@@ -138,7 +129,7 @@ footer {
   position: relative;
   width: 100%;
   text-align: center;
-  height: 50px;
+  height: 1.5rem;
 
 }
 
@@ -327,9 +318,6 @@ footer {
 
   }
 
-  h1{
-    align-content: center;
-  }
 
   .topnav{
     li:nth-child(2){
@@ -514,20 +502,40 @@ footer {
     width: 100%;
     text-align: left;
     border: 1px solid black;
+    margin-left:.2rem;
+    margin-right: .5rem;
 
     li{
       display: inline-block;
       padding: 1%;
+      margin-left: .5rem;
+    }
+
+    div{
+      margin-left: .2rem;
+      margin-top: .2rem;
     }
 
   }
 
+  
+
 
   h1{
     padding-top: 1%;
-
+    
     text-align: center;
   }
+
+  h2{
+    margin-left: .5rem;
+  }
+
+  p{
+    margin-left: .5rem;
+  }
+
+  
 
 
 
