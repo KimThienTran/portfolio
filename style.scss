@@ -312,6 +312,9 @@ footer {
 .Project {
   position: absolute;
 
+  list-style: none;
+
+
   .stopper {
     display: block;
     background-color: yellow;
@@ -379,36 +382,43 @@ footer {
       background-color: $ProjectsCol;
       border-radius: 1rem;
 
+      .empCont{
+        background-color: grey;
+        padding: .5rem;
+        margin: .5rem;
+        transition: opacity .3s ease-out, transform .3s ease-out;
+
+
+      }
+
+      .empCont:hover{
+        transform: scale(.95);
+        opacity: .5;
+
+      }
+
       img {
         display: inline-block;
         position: relative;
         max-width:100%;
         max-height:100%;
-
         transition: opacity .3s ease-out, transform .3s ease-out;
 
       }
 
+      /*
       img:hover{
         transform: scale(.95);
         opacity: .5;
       }
+      */
 
       h1{
-
-
-        margin: auto;
+  
         text-align: center;
-       border-top: black solid 1px;
-       border-bottom: black solid 1px;
-
-
 
       }
 
-      h2{
-        margin:auto;
-      }
     }
   }
 
@@ -429,9 +439,10 @@ footer {
     margin: 2% 0;
     padding-bottom: 1%;
 
-    h1{
-      
+    li{
+      text-align: left;
     }
+
 
 
       .InnerCont {

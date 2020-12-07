@@ -170,7 +170,8 @@ footer {
       background-color: #c6538c; }
 
 .Project {
-  position: absolute; }
+  position: absolute;
+  list-style: none; }
   .Project .stopper {
     display: block;
     background-color: yellow; }
@@ -200,23 +201,29 @@ footer {
       width: 25%;
       text-align: center;
       background-color: #A2E3C4;
-      border-radius: 1rem; }
+      border-radius: 1rem;
+      /*
+      img:hover{
+        transform: scale(.95);
+        opacity: .5;
+      }
+      */ }
+      .Project .ProjectsMainContent .Column .empCont {
+        background-color: grey;
+        padding: .5rem;
+        margin: .5rem;
+        transition: opacity .3s ease-out, transform .3s ease-out; }
+      .Project .ProjectsMainContent .Column .empCont:hover {
+        transform: scale(0.95);
+        opacity: .5; }
       .Project .ProjectsMainContent .Column img {
         display: inline-block;
         position: relative;
         max-width: 100%;
         max-height: 100%;
         transition: opacity .3s ease-out, transform .3s ease-out; }
-      .Project .ProjectsMainContent .Column img:hover {
-        transform: scale(0.95);
-        opacity: .5; }
       .Project .ProjectsMainContent .Column h1 {
-        margin: auto;
-        text-align: center;
-        border-top: black solid 1px;
-        border-bottom: black solid 1px; }
-      .Project .ProjectsMainContent .Column h2 {
-        margin: auto; }
+        text-align: center; }
   .Project .Banner {
     padding-top: 1.0%;
     float: right; }
@@ -227,6 +234,8 @@ footer {
     float: right;
     margin: 2% 0;
     padding-bottom: 1%; }
+    .Project .Container li {
+      text-align: left; }
     .Project .Container .InnerCont {
       border: 1px solid transparent;
       background-color: #A2E3C4;
