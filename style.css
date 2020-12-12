@@ -208,8 +208,11 @@ footer {
         opacity: .5;
       }
       */ }
+      .Project .ProjectsMainContent .Column a {
+        color: black;
+        text-decoration: none; }
       .Project .ProjectsMainContent .Column .empCont {
-        background-color: grey;
+        background-color: #38bc7d;
         padding: .5rem;
         margin: .5rem;
         transition: opacity .3s ease-out, transform .3s ease-out; }

@@ -5,8 +5,8 @@ var listLen = document.querySelectorAll('.topnav a').length;
 //SideNav vars
 var listS = document.querySelectorAll('.SideNav a');
   //SideNav-a Colors
-  var sidenav_a = 'grey';
-  var sidenav_a_hover = 'dimgrey';
+  var sidenav_a = '#72D5A5';
+  var sidenav_a_hover = '#38BC7D';
 var test = document.querySelectorAll('.SideNav a:hover')
 var listC = document.querySelectorAll('.Container');
 var conY;

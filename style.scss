@@ -382,8 +382,13 @@ footer {
       background-color: $ProjectsCol;
       border-radius: 1rem;
 
+      a{
+        color: black;
+        text-decoration: none;
+      }
+
       .empCont{
-        background-color: grey;
+        background-color: #38bc7d;
         padding: .5rem;
         margin: .5rem;
         transition: opacity .3s ease-out, transform .3s ease-out;
